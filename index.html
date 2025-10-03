@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amol - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.4rem;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: rgb(237, 230, 230);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 1.4rem;
+        }
+
+        .left a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.5rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.2rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 90px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection div {
+            white-space: nowrap;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #4245a0;
+            color: white;
+            border: 2px solid white;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .leftSection .btn:hover {
+            background: #5a5dc9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            font-size: 18px;
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2.0rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 79vw;
+            height: 2px;
+            margin: 80px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-top {
+            width: 50px;
+            position: relative;
+            top: -51px;
+            left: -24px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0d0d1a;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content h3 {
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: rgb(153, 153, 226);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: rgb(153, 153, 226);
+        }
+
+        .footer-rights {
+            color: gray;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        #home {
+            scroll-margin-top: 80px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="index.html">Amol's Portfolio</a></div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+                Hi, I'm <span class="purple">Amol Mane</span>
+
+                <div>A passionate</div>
+                <div><span id="element"></span></div>
+                <div class="buttons">
+                    <a href="https://github.com/AmolMane30" target="_blank" class="btn-link"><button class="btn">Visit
+                            Github</button></a>
+                    <a href="https://www.linkedin.com/in/amolmane30/" target="_blank" class="btn-link"><button
+                            class="btn">LinkedIn</button></a>
+                    <a href="Amol_Mane_Resume.pdf" target="_blank" class="btn-link"><button class="btn">View
+                            Resume</button></a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="c.png" alt="">
+                    <div class="vertical-title">
+                        Virtual File System
+                    </div>
+                    <div class="vertical-desc">
+                        A customised Virtual File System (CVFS) implemented in C. Simulates Linux-like file system
+                        operations with a custom shell interface. Focuses on OS internals, system calls, file handling,
+                        and memory management.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="cpp.png" alt="">
+                    <div class="vertical-title">
+                        Generalised Data Structures Library
+                    </div>
+                    <div class="vertical-desc">
+                        Generalised Data Structures Library in C++ using templates. Includes linear & non-linear data
+                        structures (Linked Lists, Stack, Queue, BST) and algorithms (Searching & Sorting). Designed as a
+                        reusable, generic, and object-oriented library for learning and development.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        File Packer-Unpacker
+                    </div>
+                    <div class="vertical-desc">
+                        File_Packer_Unpacker is a Java-based file utility tool that provides functionality for packing
+                        multiple files into a single archive and unpacking them back with all metadata preserved.To
+                        enhance security, the packed file is encrypted, and only authorized users can decrypt & extract
+                        the data.The project also features a Graphical User Interface (GUI) for user-friendly
+                        interaction.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        Chat Messenger
+                    </div>
+                    <div class="vertical-desc">
+                        This project is a Java-based peer-to-peer chat application that enables real-time text-based
+                        communication between users using Java Socket Programming. Along with providing basic chat
+                        functionality, it also maintains a log file that records all conversation details in a periodic
+                        fashion for future reference.The application is platform and architecture independent, running
+                        on any system with a Java Runtime Environment (JRE).
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        Customized Database Management System
+                    </div>
+                    <div class="vertical-desc">
+                        Implements a Database Management System without using actual Database Management System.
+                        Implemented own logic for all the SQL Queries. We can perform CRUD operations as well as
+                        Aggregate operations. Implemented Java's Collections Framework and Serialization. Persist data
+                        between program runs using serialization.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="js.jpg" alt="">
+                    <div class="vertical-title">
+                        Amol's Developer Portfolio
+                    </div>
+                    <div class="vertical-desc">
+                        A fully responsive personal portfolio website built using HTML, CSS, and JavaScript. It
+                        showcases my skills, projects, and resume with smooth navigation and clean UI/UX. Implemented a
+                        dynamic project gallery and integrated external links (LinkedIn, GitHub, Resume) for easy
+                        access.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Amol's Developer Portfolio</h3>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/AmolMane30" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/amolmane30/" target="_blank">LinkedIn</a>
+                <a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a>
+            </div>
+
+            <div class="footer-rights">
+                Copyright &#169; 2025 amolsportfolio.com | All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full Stack Developer', 'C, C++ Developer', 'Java Developer', 'System Programmer', 'Software Developer '],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>

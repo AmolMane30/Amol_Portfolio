@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Amol's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.4rem;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 1.4rem;
+        }
+
+        .left a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.5rem;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .projects-container {
+            max-width: 84vw;
+            margin: 20px auto;
+            padding: 20px 0;
+        }
+
+        .projects-heading {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: rgb(18, 18, 62);
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: rgb(170, 107, 228);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background-color: rgb(170, 107, 228);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            background-color: #686de7;
+            color: white;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background-color: #5a5dc9;
+        }
+
+        footer {
+            background-color: #0d0d1a;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content h3 {
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: rgb(153, 153, 226);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: rgb(153, 153, 226);
+        }
+
+        .footer-rights {
+            color: gray;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="index.html">Amol's Portfolio</a></div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-container">
+            <h1 class="projects-heading">My <span class="purple">Projects</span></h1>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">💾</div>
+                    <h3 class="project-title">Virtual File System</h3>
+                    <p class="project-description">
+                        A customized Virtual File System (CVFS) implemented in C. Simulates Linux-like file system
+                        operations with a custom shell interface. Focuses on OS internals, system calls, file handling,
+                        and memory management.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">System Programming</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AmolMane30/Virtual_File_System" target="_blank"
+                            class="project-link">Github Repository</a>
+                        <a href="https://github.com/AmolMane30/Virtual_File_System/blob/main/CVFS.cpp" target="_blank"
+                            class="project-link">View Code</a>
+                        <a href="https://github.com/AmolMane30/Virtual_File_System/blob/main/CVFS_Documentation.cpp"
+                            target="_blank" class="project-link">View Documentation</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">📚</div>
+                    <h3 class="project-title">Generalised Data Structures Library</h3>
+                    <p class="project-description">
+                        Generalised Data Structures Library in C++ using templates. Includes linear & non-linear data
+                        structures and algorithms. Designed as a reusable, generic, and object-oriented library for
+                        learning and development.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Templates</span>
+                        <span class="tech-tag">Data Structures</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AmolMane30/Generalized_Data_Structures_Library" target="_blank"
+                            class="project-link">Github Repository</a>
+                        <a href="https://github.com/AmolMane30/Generalized_Data_Structures_Library/blob/main/Generalized_Data_Structure_Library.cpp"
+                            target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">📦</div>
+                    <h3 class="project-title">File Packer-Unpacker</h3>
+                    <p class="project-description">
+                        Java-based file utility tool that packs multiple files into a single encrypted archive and
+                        unpacks them with metadata preserved. Features a GUI for user-friendly interaction and enhanced
+                        security.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Swing GUI</span>
+                        <span class="tech-tag">File Handling</span>
+                        <span class="tech-tag">Encryption</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AmolMane30/PackerUnpacker" target="_blank"
+                            class="project-link">Github Repository</a>
+                        <a href="https://github.com/AmolMane30/PackerUnpacker/blob/main/PackerUnpaker.java"
+                            target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">💬</div>
+                    <h3 class="project-title">Chat Messenger</h3>
+                    <p class="project-description">
+                        Java-based peer-to-peer chat application for real-time text communication using Socket
+                        Programming. Maintains conversation logs and runs on any system with JRE. Platform and
+                        architecture independent.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Socket Programming</span>
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">Multi-threading</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">GitHub Repository</a>
+                        <a href="#" target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">🗃️</div>
+                    <h3 class="project-title">Customized Database Management System</h3>
+                    <p class="project-description">
+                        Implements a DBMS without using actual database systems. Supports CRUD operations, aggregate
+                        functions, and SQL-like queries using Java's Collections Framework and Serialization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Collections</span>
+                        <span class="tech-tag">Serialization</span>
+                        <span class="tech-tag">Data Persistence</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AmolMane30/Customized_Database_Management_System" target="_blank"
+                            class="project-link">Github Repository</a>
+                        <a href="https://github.com/AmolMane30/Customized_Database_Management_System/blob/main/Customized_Database_Management_System.java"
+                            target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <h3 class="project-title">Developer Portfolio Website</h3>
+                    <p class="project-description">
+                        Fully responsive personal portfolio website built using HTML, CSS, and JavaScript. Showcases
+                        skills, projects, and resume with smooth navigation and clean UI/UX. Integrated external links
+                        and dynamic elements.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">Github Repository</a>
+                        <a href="#" target="_blank" class="project-link">Live Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Amol's Developer Portfolio</h3>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/AmolMane30" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/amolmane30/" target="_blank">LinkedIn</a>
+                <a href="Amol_Mane_Resume.pdf" target="_blank">Resume</a>
+            </div>
+
+            <div class="footer-rights">
+                Copyright &#169; 2025 amolsportfolio.com | All rights reserved
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
